@@ -1,8 +1,8 @@
 const axios = require('axios')
 
-async function getDiscourseTopics({ body }) {
+export default async function getDiscourseTopics(request, response) {
   const { DISCOURSE_API_KEY , DISCOURSE_USER } = process.env
-
+  const { body } = request
   try {
     // Set API endpoint and headers
     let discourse_endpoint = `https://discourse.getdbt.com`
@@ -14,7 +14,7 @@ async function getDiscourseTopics({ body }) {
 
     const query = buildQueryString(body)
     if(!query) throw new Error('Unable to build query string.')
-    
+
     // Get topics from Discourse
     let { data: { posts, topics } } = await axios.get(`${discourse_endpoint}/search?q=${query}`, { headers })
 
@@ -24,7 +24,7 @@ async function getDiscourseTopics({ body }) {
       // Log message with encoded query and end function
       console.log('Unable to get results from api request.')
       console.log(`Search query: ${query}`)
-      return returnResponse(200, [])
+      response.status(200).json([])
     }
 
     // Set author and like_count for topics if not querying by specific term
@@ -58,27 +58,12 @@ async function getDiscourseTopics({ body }) {
     }
 
     // Return topics 
-    return await returnResponse(200, allTopics)
+    response.status(200).json(allTopics)
   } catch(err) {
     // Log and return the error
     console.log('err', err)
-    return await returnResponse(500, { error: 'Unable to get topics from Discourse.'})
+    response.status(500).json({ error: 'Unable to get topics from Discourse.'})
   }
-}
-
-async function returnResponse(status, res) {
-  const headers = {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS' 
-  }
-  const resObj = {
-    statusCode: status,
-    headers,
-    body: JSON.stringify(res)
-  }
-  return resObj
 }
 
 function buildQueryString(body) {
@@ -88,7 +73,7 @@ function buildQueryString(body) {
   let query = ''
 
   // check param and apply to query if set
-  for(const [key, value] of Object.entries(JSON.parse(body))) {
+  for(const [key, value] of Object.entries(body)) {
     // validate categories
     // if valid, add to query string
     if(validateItem({ key, value })) {
@@ -144,5 +129,3 @@ function validateItem({ key, value }) {
     return true
   }
 }
-
-exports.handler = getDiscourseTopics

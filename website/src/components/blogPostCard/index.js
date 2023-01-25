@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
-import createPostPreview from '@site/functions/post-preview';
+import createPostPreview from '@site/api/post-preview';
 
 
 function BlogPostCard({ postMetaData }) {
