@@ -40,8 +40,8 @@ export const DiscourseFeed = ({
 
         // Build Netlify Function endpoint
         const endpoint = window?.location?.hostname?.includes('localhost')
-          ? 'http://localhost:8888/.netlify/functions/get-discourse-topics'
-          : '/.netlify/functions/get-discourse-topics'
+          ? 'http://localhost:60546/api/get-discourse-topics'
+          : '/api/get-discourse-topics'
 
         // If 'after' prop not passed in, set relative after date
         let afterDate = after
