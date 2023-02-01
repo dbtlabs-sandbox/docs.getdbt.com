@@ -38,6 +38,7 @@ export const DiscourseFeed = ({
         setLoading(true)
         setIsError(false)
 
+        // Comment
         // Build Netlify Function endpoint
         const endpoint = window?.location?.hostname?.includes('localhost')
           ? 'http://localhost:60546/api/get-discourse-topics'
