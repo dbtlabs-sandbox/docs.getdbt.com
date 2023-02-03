@@ -7,7 +7,6 @@
       600,
       1000
     ],
-    "domains": [],
     "minimumCacheTTL": 60,
     "formats": [
       "image/webp",

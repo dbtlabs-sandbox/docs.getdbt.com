@@ -12,7 +12,7 @@ function Hero({ heading, subheading, showGraphic = false, customStyles = {}, cla
           <div className="col col--7">
             <h1>{heading}</h1>
             <p>{subheading}</p>
-            <img src="/_vercel/image?url=%2Fimages%2Ftest.png&w=1000&q=75" width="500" height="375" />
+            <img src="/_vercel/image?url=%2Ftest.png&w=1000&q=75" width="500" height="375" />
           </div>
         </div>
       </div>
