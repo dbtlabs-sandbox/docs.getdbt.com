@@ -12,10 +12,13 @@ on:
 jobs:
   markdown-link-check:
     runs-on: ubuntu-latest
+    # Check out the latest version of the code
     steps:
-    - uses: actions/checkout@master
-    - uses: gaurav-nelson/github-action-markdown-link-check@v1
-      # checks all markdown files from /docs including all subfolders
+    - uses: actions/checkout@v3
+
+    # Checks all markdown files from /website including all subfolders
+    - name: Check links
+      uses: gaurav-nelson/github-action-markdown-link-check@v1
       with:
         use-quiet-mode: 'yes'
         use-verbose-mode: 'yes'
