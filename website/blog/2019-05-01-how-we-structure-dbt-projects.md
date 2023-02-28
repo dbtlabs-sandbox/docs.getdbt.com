@@ -102,7 +102,7 @@ Each staging directory contains at a minimum:
     *   Named `stg_<source>__<object>`.
     *   Generally materialized as a <Term id="view" /> (unless performance requires it as a table).
 *   A `src_<source>.yml` file which contains:
-    *   [Source](/docs/build/sourcesffggaas) definitions, tests, and documentation
+    *   [Source](/docs/build/sources) definitions, tests, and documentation
 *   A `stg_<source>.yml` file which contains
   * [Tests](/docs/build/tests) and [documentation](/docs/collaborate/documentation) for models in the same directory
 
