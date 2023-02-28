@@ -1,8 +1,8 @@
 {
   "replacementPatterns": [
     {
-      "pattern": "^/",
-      "replacement": "/docs/"
+      "pattern": "^/docs/",
+      "replacement": "/docs/docs/"
     }
   ]
 }
