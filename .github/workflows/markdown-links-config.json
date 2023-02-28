@@ -1,8 +1,8 @@
 {
   "replacementPatterns": [
     {
-      "pattern": "^/",
-      "replacement": "{{BASEURL}}/"
+      "pattern": "^/docs/",
+      "replacement": "/docs/docs/"
     }
   ]
 }
