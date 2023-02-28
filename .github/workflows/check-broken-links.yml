@@ -1,13 +1,9 @@
 name: Check Broken Links
 
 on:
-  pull_request:
+  push:
     branches:
       - current
-    types:
-      # runs when the PR is opened
-      - opened
-      - reopened
 
 jobs:
   markdown-link-check:
