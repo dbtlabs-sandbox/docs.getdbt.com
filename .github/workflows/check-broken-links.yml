@@ -1,9 +1,7 @@
 name: Check Broken Links
 
 on:
-  push:
-    branches:
-      - current
+  push
 
 jobs:
   markdown-link-check:
