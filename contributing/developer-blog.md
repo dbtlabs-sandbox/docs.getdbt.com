@@ -9,7 +9,7 @@ The dbt Developer Blog is a place where analytics practitioners can go to share 
 ### What makes a good developer blog post?
 
 - The short answer: Practical, hands on analytics engineering tutorials and stories
-    - [Slim CI/CD with Bitbucket](https://docs.getdbt.com/blog/slim-ci-cd-with-bitbucket-pipelines)
+    - [Slim CI/CD with Bitbucket](https://docs.getdbt.com/blog/slim-ci-cd-with-bitbucket-pipelinesz)
     - [So You Want to Build a dbt Package](https://docs.getdbt.com/blog/so-you-want-to-build-a-package)
     - [Founding an Analytics Engineering Team](https://docs.getdbt.com/blog/founding-an-analytics-engineering-team-smartsheet)
 - See the [Developer Blog Core Principles](#core-principles)
