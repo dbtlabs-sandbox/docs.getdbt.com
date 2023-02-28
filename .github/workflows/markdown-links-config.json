@@ -1,16 +1,16 @@
 {
   "replacementPatterns": [
     {
-      "pattern": "^/",
-      "replacement": "website/docs/"
-    },
-    {
       "pattern": "^/blog/",
-      "replacement": "website/blog/"
+      "replacement": "/website/blog/"
     },
     {
       "pattern": "^/snippets/",
-      "replacement": "website/snippets/"
+      "replacement": "/website/snippets/"
+    },
+    {
+      "pattern": "^/",
+      "replacement": "/website/docs/"
     }
   ]
 }
