@@ -24,5 +24,5 @@ jobs:
         use-verbose-mode: 'yes'
         check-modified-files-only: 'yes'
         base-branch: 'current'
-        # folder-path: 'website/docs, website/blog, website/snippets'
-        # config-file: .github/workflows/markdown-links-config.json
+        folder-path: 'website/'
+        config-file: .github/workflows/markdown-links-config.json
