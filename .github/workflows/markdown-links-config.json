@@ -2,7 +2,7 @@
   "replacementPatterns": [
     {
       "pattern": "^/blog/",
-      "replacement": "/website/blog/"
+      "replacement": "{{BASEURL}}/website/blog/"
     }
   ]
 }
