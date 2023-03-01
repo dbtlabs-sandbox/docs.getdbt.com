@@ -3,14 +3,6 @@
     {
       "pattern": "^/blog/",
       "replacement": "/website/blog/"
-    },
-    {
-      "pattern": "^/snippets/",
-      "replacement": "/website/snippets/"
-    },
-    {
-      "pattern": "^/",
-      "replacement": "/website/docs/"
     }
   ]
 }
