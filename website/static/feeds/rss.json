@@ -7,6 +7,41 @@
     "icon": "https://www.getdbt.com/ui/img/blog/dbt-card.jpg",
     "items": [
         {
+            "id": "apiv2-limit\"",
+            "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/Mar-2023/apiv2-limit\"",
+            "title": "API requests have a maximum limit of `100`",
+            "summary": "Mar 2023: In order to ease pressure on our API, we have implemented a maximum limit of `100` for all API requests to our `list` endpoints. This limit is applicable to multi-tenant instances only.",
+            "date_modified": "2023-03-06T05:00:00.000Z"
+        },
+        {
+            "id": "1.0-deprecation",
+            "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/Mar-2023/1.0-deprecation",
+            "title": "dbt Cloud requires dbt version 1.0 or later",
+            "summary": "Mar 2023: dbt Cloud now requires dbt version 1.0 or later and non-compliant jobs or environments were automatically upgraded to v1.4",
+            "date_modified": "2023-03-01T05:00:00.000Z"
+        },
+        {
+            "id": "feb-ide-updates",
+            "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/Feb-2023/feb-ide-updates",
+            "title": "IDE updates and fixes",
+            "summary": "Feb 2023: We've enhanced the IDE by adding custom node colors in the DAG, ref autocomplete, double-click files to rename them, add link to repo from the branch name, enabled syntax highlighting for jinja, improve file tree render time, and more.",
+            "date_modified": "2023-03-01T05:00:00.000Z"
+        },
+        {
+            "id": "no-partial-parse-config",
+            "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/Feb-2023/no-partial-parse-config",
+            "title": "Disable partial parsing in dbt Cloud job commands",
+            "summary": "You can now disable partial parsing in dbt Cloud job commands.",
+            "date_modified": "2023-02-15T05:00:00.000Z"
+        },
+        {
+            "id": "ide-updates",
+            "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/Jan-2023/ide-updates",
+            "title": "IDE updates and fixes",
+            "summary": "Jan 2023: We've enhanced the IDE with improved syntax highlighting, faster and snappier IDE, improved error messaging, view repo status, added an easter egg, and more.",
+            "date_modified": "2023-02-01T05:00:00.000Z"
+        },
+        {
             "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/Dec-2022/private-packages-clone-git-token",
             "title": "Private packages must be cloned using access tokens provided by environment variables",
             "summary": "Private GitHub packages must be cloned using access tokens provided by environment variables.",
@@ -30,7 +65,7 @@
             "id": "ide-features-ide-deprecation",
             "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/Nov-2022/ide-features-ide-deprecation",
             "title": "New IDE features and classic IDE deprecation",
-            "summary": "Enhancement and Deprecation: Extra features in new IDE, and classic IDE deprecation",
+            "summary": "Nov 2022: We've enhanced the IDE by adding a button to automatically format your SQL. Added dark mode, Git diff view, and 4 new autocomplete options. We have deprecated the classic IDE.",
             "date_modified": "2022-11-29T05:00:00.000Z"
         },
         {
@@ -44,7 +79,7 @@
             "id": "new-ide-launch",
             "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/Oct-2022/new-ide-launch",
             "title": "Enhancement: New Cloud IDE launch",
-            "summary": "Enhancement: New Cloud IDE launch",
+            "summary": "Oct 2022: Introducing a new dbt Cloud IDE that's faster, has performance upgrades, ergonomics improvements, and other delightful enhancements.",
             "date_modified": "2022-10-18T04:00:00.000Z"
         },
         {
@@ -79,14 +114,14 @@
             "id": "ide-improvements-beta.md",
             "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/Aug-2022/ide-improvements-beta.md",
             "title": "Enhancement: New Cloud IDE beta",
-            "summary": "Adding IDE performance and reliability improvements",
+            "summary": "Aug 2022: Launch of the IDE beta, which focuses on performance and reliability improvements.",
             "date_modified": "2022-08-16T04:00:00.000Z"
         },
         {
             "id": "render-lineage-feature",
             "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/July-2022/render-lineage-feature",
             "title": "Enhancement: Large DAG feature",
-            "summary": "Add a render button to visualize large DAGs",
+            "summary": "Jul 2022: Use the Render Lineage button to visualize large DAGs",
             "date_modified": "2022-07-05T04:00:00.000Z"
         },
         {
@@ -127,7 +162,7 @@
             "id": "ide-timeout-message",
             "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/March-2022/ide-timeout-message",
             "title": "Spotty internet issues no longer cause a session time out message",
-            "summary": "We fixed an issue where a spotty internet connection could cause the “IDE session timed out” message to appear unexpectedly. People using a VPN were most likely to see this issue.",
+            "summary": "Mar 2022: We fixed an issue where a spotty internet connection could cause the “IDE session timed out” message to appear unexpectedly. People using a VPN were most likely to see this issue.",
             "date_modified": "2022-03-10T05:00:00.000Z"
         },
         {
@@ -147,14 +182,14 @@
             "id": "DAG-updates-more",
             "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/February-2022/DAG-updates-more",
             "title": "DAG updates and performance improvements",
-            "summary": "Clicking a node in the DAG opens a model or config file in new tab in the IDE.",
+            "summary": "Feb 2022: Clicking a node in the DAG opens a model or config file in new tab in the IDE.",
             "date_modified": "2022-02-02T05:00:00.000Z"
         },
         {
             "id": "ide-timeout-message",
             "url": "https://docs.getdbt.com/docs/dbt-versions/release-notes/January-2022/ide-timeout-message",
             "title": "Autocomplete snippets for SQL and YAML files in IDE",
-            "summary": "Autocomplete snippets for SQL and YAML files in IDE",
+            "summary": "Jan 2022: Autocomplete snippets for SQL and YAML files in IDE",
             "date_modified": "2022-01-19T05:00:00.000Z"
         },
         {

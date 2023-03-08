@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.getdbt.com</id>
     <title>dbt Cloud Release Notes</title>
-    <updated>2022-12-23T05:00:00.000Z</updated>
+    <updated>2023-03-06T05:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.getdbt.com"/>
     <link rel="self" href="https://docs.getdbt.com/atom.xml"/>
@@ -10,6 +10,41 @@
     <logo>https://www.getdbt.com/ui/img/blog/dbt-card.jpg</logo>
     <icon>https://docs.getdbt.com/img/favicon.svg</icon>
     <rights>Copyright © 2023 dbt Labs™, Inc. All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[API requests have a maximum limit of `100`]]></title>
+        <id>apiv2-limit"</id>
+        <link href="https://docs.getdbt.com/docs/dbt-versions/release-notes/Mar-2023/apiv2-limit&quot;"/>
+        <updated>2023-03-06T05:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Mar 2023: In order to ease pressure on our API, we have implemented a maximum limit of `100` for all API requests to our `list` endpoints. This limit is applicable to multi-tenant instances only.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[dbt Cloud requires dbt version 1.0 or later]]></title>
+        <id>1.0-deprecation</id>
+        <link href="https://docs.getdbt.com/docs/dbt-versions/release-notes/Mar-2023/1.0-deprecation"/>
+        <updated>2023-03-01T05:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Mar 2023: dbt Cloud now requires dbt version 1.0 or later and non-compliant jobs or environments were automatically upgraded to v1.4]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[IDE updates and fixes]]></title>
+        <id>feb-ide-updates</id>
+        <link href="https://docs.getdbt.com/docs/dbt-versions/release-notes/Feb-2023/feb-ide-updates"/>
+        <updated>2023-03-01T05:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Feb 2023: We've enhanced the IDE by adding custom node colors in the DAG, ref autocomplete, double-click files to rename them, add link to repo from the branch name, enabled syntax highlighting for jinja, improve file tree render time, and more.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Disable partial parsing in dbt Cloud job commands]]></title>
+        <id>no-partial-parse-config</id>
+        <link href="https://docs.getdbt.com/docs/dbt-versions/release-notes/Feb-2023/no-partial-parse-config"/>
+        <updated>2023-02-15T05:00:00.000Z</updated>
+        <summary type="html"><![CDATA[You can now disable partial parsing in dbt Cloud job commands.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[IDE updates and fixes]]></title>
+        <id>ide-updates</id>
+        <link href="https://docs.getdbt.com/docs/dbt-versions/release-notes/Jan-2023/ide-updates"/>
+        <updated>2023-02-01T05:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Jan 2023: We've enhanced the IDE with improved syntax highlighting, faster and snappier IDE, improved error messaging, view repo status, added an easter egg, and more.]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Private packages must be cloned using access tokens provided by environment variables]]></title>
         <id>https://docs.getdbt.com/docs/dbt-versions/release-notes/Dec-2022/private-packages-clone-git-token</id>
@@ -36,7 +71,7 @@
         <id>ide-features-ide-deprecation</id>
         <link href="https://docs.getdbt.com/docs/dbt-versions/release-notes/Nov-2022/ide-features-ide-deprecation"/>
         <updated>2022-11-29T05:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Enhancement and Deprecation: Extra features in new IDE, and classic IDE deprecation]]></summary>
+        <summary type="html"><![CDATA[Nov 2022: We've enhanced the IDE by adding a button to automatically format your SQL. Added dark mode, Git diff view, and 4 new autocomplete options. We have deprecated the classic IDE.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[The dbt Cloud + Databricks experience is getting even better]]></title>
@@ -50,7 +85,7 @@
         <id>new-ide-launch</id>
         <link href="https://docs.getdbt.com/docs/dbt-versions/release-notes/Oct-2022/new-ide-launch"/>
         <updated>2022-10-18T04:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Enhancement: New Cloud IDE launch]]></summary>
+        <summary type="html"><![CDATA[Oct 2022: Introducing a new dbt Cloud IDE that's faster, has performance upgrades, ergonomics improvements, and other delightful enhancements.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Announcing dbt Cloud’s native integration with Azure DevOps]]></title>
@@ -85,14 +120,14 @@
         <id>ide-improvements-beta.md</id>
         <link href="https://docs.getdbt.com/docs/dbt-versions/release-notes/Aug-2022/ide-improvements-beta.md"/>
         <updated>2022-08-16T04:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Adding IDE performance and reliability improvements]]></summary>
+        <summary type="html"><![CDATA[Aug 2022: Launch of the IDE beta, which focuses on performance and reliability improvements.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Enhancement: Large DAG feature]]></title>
         <id>render-lineage-feature</id>
         <link href="https://docs.getdbt.com/docs/dbt-versions/release-notes/July-2022/render-lineage-feature"/>
         <updated>2022-07-05T04:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Add a render button to visualize large DAGs]]></summary>
+        <summary type="html"><![CDATA[Jul 2022: Use the Render Lineage button to visualize large DAGs]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Refresh expired access tokens in the IDE when using GitLab]]></title>
@@ -134,7 +169,7 @@
         <id>ide-timeout-message</id>
         <link href="https://docs.getdbt.com/docs/dbt-versions/release-notes/March-2022/ide-timeout-message"/>
         <updated>2022-03-10T05:00:00.000Z</updated>
-        <summary type="html"><![CDATA[We fixed an issue where a spotty internet connection could cause the “IDE session timed out” message to appear unexpectedly. People using a VPN were most likely to see this issue.]]></summary>
+        <summary type="html"><![CDATA[Mar 2022: We fixed an issue where a spotty internet connection could cause the “IDE session timed out” message to appear unexpectedly. People using a VPN were most likely to see this issue.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Dividing queue time into waiting and prep time]]></title>
@@ -155,14 +190,14 @@
         <id>DAG-updates-more</id>
         <link href="https://docs.getdbt.com/docs/dbt-versions/release-notes/February-2022/DAG-updates-more"/>
         <updated>2022-02-02T05:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Clicking a node in the DAG opens a model or config file in new tab in the IDE.]]></summary>
+        <summary type="html"><![CDATA[Feb 2022: Clicking a node in the DAG opens a model or config file in new tab in the IDE.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Autocomplete snippets for SQL and YAML files in IDE]]></title>
         <id>ide-timeout-message</id>
         <link href="https://docs.getdbt.com/docs/dbt-versions/release-notes/January-2022/ide-timeout-message"/>
         <updated>2022-01-19T05:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Autocomplete snippets for SQL and YAML files in IDE]]></summary>
+        <summary type="html"><![CDATA[Jan 2022: Autocomplete snippets for SQL and YAML files in IDE]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Model timing for Multi-tenant Team and Enterprise accounts]]></title>
