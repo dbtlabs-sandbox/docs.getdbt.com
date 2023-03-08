@@ -24,6 +24,7 @@ const sidebarSettings = {
                 "docs/get-started/getting-started/getting-set-up/setting-up-snowflake",
               ],
             },
+            ,
             {
               type: "category",
               label: "Building your first project",
