@@ -2,8 +2,9 @@ name: Content Governance
 on: 
   push:
     # Only run if markdown file changes are detected 
-    paths:
-    - '**.md'
+    # TODO: Uncomment below
+    #paths:
+    #- '**.md'
 
 jobs:
   build:
