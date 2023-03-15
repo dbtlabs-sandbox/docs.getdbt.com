@@ -1,5 +1,9 @@
 name: Content Governance
-on: push
+on: 
+  push:
+    # Only run if markdown file changes are detected 
+    paths:
+    - '**.md'
 
 jobs:
   build:
