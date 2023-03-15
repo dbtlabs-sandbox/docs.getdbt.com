@@ -239,6 +239,7 @@ PyPI
 prebuilt
 Dockerfile
 hardcoded
+hardcoding
 Shopify
 subfolder
 subfolders
@@ -511,3 +512,8 @@ SsoLoginFailed
 SsoLoginSucceeded
 UserAdded
 UserRemoved
+DockerHub
+OpenLineage
+Dashboarding
+krauth
+trendline
