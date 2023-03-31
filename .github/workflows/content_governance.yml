@@ -1,0 +1,12 @@
+name: Content Governance
+on: [push]
+
+jobs:
+  vale:
+    name: Vale Spellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: errata-ai/vale-action@reviewdog
+        with:
+          files: website/
