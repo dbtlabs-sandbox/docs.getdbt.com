@@ -22,3 +22,5 @@ Most command-line tools, including dbt, have a `--help` flag that you can use to
 
 :::
 
+
+TEST you can find more information on installing and setting up the dbt CLI [here](/dbt-cli/cli-overview).
