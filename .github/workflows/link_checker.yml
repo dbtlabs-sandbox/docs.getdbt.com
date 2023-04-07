@@ -14,4 +14,5 @@ jobs:
           use-verbose-mode: 'yes'
           check-modified-files-only: 'yes'
           base-branch: 'current'
-          folder-path: 'website/docs/'
+          folder-path: 'website/'
+          config-file: '.github/workflows/link_checker_config.json'
