@@ -8,11 +8,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Run Link Checker
-        uses: gaurav-nelson/github-action-markdown-link-check@v1
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@master
         with:
-          use-verbose-mode: 'yes'
-          check-modified-files-only: 'yes'
-          base-branch: 'current'
-          folder-path: 'website/'
-          config-file: '.github/workflows/link_checker_config.json'
+          args: --verbose --max-retries 4 --no-progress '**/*.md'
+      #- name: Run Link Checker
+      #  uses: gaurav-nelson/github-action-markdown-link-check@v1
+      #  with:
+      #    use-verbose-mode: 'yes'
+      #    check-modified-files-only: 'yes'
+      #    base-branch: 'current'
+      #    folder-path: 'website/'
+      #    config-file: '.github/workflows/link_checker_config.json'
