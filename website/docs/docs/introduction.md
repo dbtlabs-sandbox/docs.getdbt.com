@@ -13,7 +13,7 @@ Read more about why we want to enable analysts to work more like software engine
 
 [Test, should work](../community/resources/viewpoint.md).
 
-[Should also work](/docs/community/resources/viewpoint).
+[Should also work](/docs/community/resources/viewpoint)
 
 ## dbt optimizes your workflow
 
