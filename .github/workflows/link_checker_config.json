@@ -3,6 +3,10 @@
     {
       "pattern": "^/",
       "replacement": "/github/workspace/website/docs/"
+    },
+    {
+      "pattern": "(?!\\.md)$",
+      "replacement": ".md"
     }
   ]
 }
