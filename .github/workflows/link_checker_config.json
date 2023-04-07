@@ -7,7 +7,7 @@
   "replacementPatterns": [
     {
       "pattern": "^/",
-      "replacement": "/github/workspace/website/docs/"
+      "replacement": "https://docs.getdbt.com/"
     },
     {
       "pattern": "(\\.md)?$",
