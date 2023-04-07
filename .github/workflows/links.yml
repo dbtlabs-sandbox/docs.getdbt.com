@@ -11,7 +11,7 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@master
         with:
-          args: --verbose --max-retries 4 --no-progress '**/*.md'
+          args: --verbose
       #- name: Run Link Checker
       #  uses: gaurav-nelson/github-action-markdown-link-check@v1
       #  with:

@@ -1,5 +1,8 @@
 _We use [docusaurus](https://v2.docusaurus.io/) to power [docs.getdbt.com](https://docs.getdbt.com/)._
 
+[![Check Links](https://github.com/dbtlabs-sandbox/docs.getdbt.com/actions/workflows/links.yml/badge.svg)](https://github.com/dbtlabs-sandbox/docs.getdbt.com/actions/workflows/links.yml)
+
+
 #### Table of Contents
 
 * [Code of Conduct](#Code-of-conduct)

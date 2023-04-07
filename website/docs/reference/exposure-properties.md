@@ -3,8 +3,8 @@ title: Exposure properties
 ---
 
 ## Related documentation
-- [Using exposures](exposures)
-- [Declaring resource properties](configs-and-properties)
+- [Using exposures](/build/exposures)
+- [Declaring resource properties](/reference/configs-and-properties)
 
 ## Overview
 Exposures are defined in `.yml` files nested under an `exposures:` key. You may define `exposures` in YAML files that also define define `sources` or `models`.
