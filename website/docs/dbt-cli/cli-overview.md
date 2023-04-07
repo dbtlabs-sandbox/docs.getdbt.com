@@ -12,6 +12,8 @@ When using the command line, you can run commands and do other work from the cur
 
 Once you verify your dbt project is your working directory, you can execute dbt commands. A full list of dbt commands can be found in the [reference section](dbt-commands).
 
+[reference section](/reference/dbt-commands).
+
 <Lightbox src="/img/docs/running-a-dbt-project/6245b3b-ezgif-4-2bcd214f09db.gif" title=""/>
 
 :::tip Pro tip: Using the --help flag

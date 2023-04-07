@@ -47,6 +47,8 @@ dbt Cloud is the fastest and most reliable way to deploy dbt. Develop, test, sch
 
 dbt Core is an open-source tool that enables data teams to transform data using analytics engineering best practices. You can install and use dbt Core on the command line. Learn more with the [quickstart for dbt Core](/docs/quickstarts/dbt-core/quickstart).
 
+[quickstart for dbt Core](/quickstarts/dbt-core/quickstart).
+
 ## The power of dbt
 
 As a dbt user, your main focus will be on writing models (i.e. select queries) that reflect core business logic – there’s no need to write boilerplate code to create tables and views, or to define the order of execution of your models. Instead, dbt handles turning these models into objects in your warehouse for you.
