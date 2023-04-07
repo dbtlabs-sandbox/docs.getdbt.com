@@ -5,7 +5,7 @@
       "replacement": "/github/workspace/website/docs/"
     },
     {
-      "pattern": "(?!\\.md)$",
+      "pattern": "(\\.md)?$",
       "replacement": ".md"
     }
   ]
