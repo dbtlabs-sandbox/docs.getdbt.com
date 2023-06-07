@@ -14,4 +14,4 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@master
         with:
-          args: --config .github/lychee.toml './website/**/*.md'
+          args: --verbose --config .github/lychee.toml './website/**/*.md'
