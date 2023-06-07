@@ -25,7 +25,7 @@ cache = false
 accept = [200, 429]
 
 # Base URL or website root directory to check relative URLs.
-base = "https://docs.getdbt.com"
+# base = "https://docs.getdbt.com"
 
 ###
 ### Exclusions
