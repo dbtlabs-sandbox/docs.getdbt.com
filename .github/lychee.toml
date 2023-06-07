@@ -32,9 +32,7 @@ accept = [200, 429]
 ###
 
 # Exclude URLs from checking (supports regex)
-exclude = [
-  'file://*'
-]
+# exclude = ['file://*']
 
 # Exclude all mail addresses from checking
 exclude_mail = true
