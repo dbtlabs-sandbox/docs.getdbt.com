@@ -33,6 +33,7 @@ base = "https://docs.getdbt.com"
 
 # Exclude URLs from checking (supports regex)
 exclude = [
+  'frontMatter.',
   'https://badge.fury.io',
   'https://img.shields.io'
 ]
