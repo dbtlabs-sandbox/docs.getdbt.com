@@ -3,7 +3,7 @@ title: "What is dbt?"
 id: "introduction"
 ---
 
-[intentionally nuked link](/going-nowhere-fast)
+[intentionally nuked link](/going-nowhere-fasts)
 
 <Snippet src="what-is-dbt-intro" />
 
