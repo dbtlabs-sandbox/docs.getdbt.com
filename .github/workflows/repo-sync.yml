@@ -1,0 +1,84 @@
+name: Repo Sync
+
+on:
+  push
+
+jobs:
+  repo-sync:
+    permissions:
+      contents: write
+      pull-requests: write
+    name: Repo Sync
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        # Use the INTERMEDIATE_BRANCH as the checkout reference
+        ref: ${{ secrets.INTERMEDIATE_BRANCH }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        # Fetch all history for all branches and tags
+        fetch-depth: 0  
+
+    # Sync the source repo to the destination branch using repo-sync/github-sync
+    - uses: repo-sync/github-sync@v2
+      name: Sync repo to branch
+      with:
+        # Source repository to sync from
+        source_repo: ${{ secrets.SOURCE_REPO }}
+        # Source branch to sync from
+        source_branch: current
+        # Destination branch to sync to
+        destination_branch: ${{ secrets.INTERMEDIATE_BRANCH }}
+        github_token: ${{ secrets.WORKFLOW_TOKEN }}
+
+    - name: Ship pull request
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.WORKFLOW_TOKEN }}
+        result-encoding: string
+        script: |
+          const {owner, repo} = context.repo;
+          const head = '${{ secrets.INTERMEDIATE_BRANCH }}';
+          const base = 'current'
+
+          async function closePullRequest(prNumber) {
+            console.log('closing PR', prNumber)
+            await github.rest.pulls.update({
+              owner,
+              repo,
+              pull_number: prNumber,
+              state: 'closed'
+            });
+
+            // Error loud
+            console.log('closed PR', prNumber)
+          }
+
+          console.log('Closing any exisiting PRs')
+          const { data: existingPRs } = await github.rest.pulls.list({
+            owner,
+            repo,
+            head,
+            base,
+          });
+          console.log(existingPRs)
+
+          for (const pr of existingPRs) {
+            if (pr.head.ref === head) {
+              await closePullRequest(pr.number);
+            }
+          }
+
+          console.log('Creating new PR')
+          const { data: newPR } = await github.rest.pulls.create({
+            owner,
+            repo,
+            head,
+            base,
+            title: 'Syncing repo new',
+            body: 'Syncing repo',
+          });
+
+          console.log('Created new PR', newPR)
+          
+ 
