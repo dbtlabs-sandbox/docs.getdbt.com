@@ -112,7 +112,7 @@ function Home() {
           </section>
 
           <section className="from-the-community">
-            <h2>From the dbt Community</h2>
+            <h2>From the dbt Community!</h2>
             <div className="grid--3-col">
               <div>
                 <Card
