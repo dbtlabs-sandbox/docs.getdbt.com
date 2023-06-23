@@ -40,7 +40,7 @@ jobs:
             const {owner, repo} = context.repo;
             const head = '${{ secrets.INTERMEDIATE_BRANCH }}';
             const base = 'current'
-          
+
             async function closePullRequest(prNumber) {
               console.log('closing PR', prNumber)
               await github.rest.pulls.update({
@@ -59,7 +59,6 @@ jobs:
               head,
               base,
             });
-            console.log(existingPRs)
           
             for (const pr of existingPRs) {
               if (pr.head.ref === head) {
@@ -74,18 +73,19 @@ jobs:
                 repo,
                 head,
                 base,
-                title: 'Syncing repo new',
-                body: 'Syncing repo',
+                title: 'REPO SYNC - Public to Private',
+                body: 'This is an automated pull request to sync changes between the public and private repos.',
               });
           
               console.log('Created new PR', newPR)
-            } catch (error) {
-              if (error.status === 422) {
-                console.log('No new commits, skipping PR creation');
-              } else {
-                console.error(error);
+              } catch (err) {
+                // Don't error/alert if there's no commits to sync
+                if (err.message?.includes('No commits')) {
+                  console.log(err.message)
+                  return
+                }
+                throw err
               }
-            }
 
           
  
