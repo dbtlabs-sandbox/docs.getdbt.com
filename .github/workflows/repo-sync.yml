@@ -1,7 +1,8 @@
 name: Repo Sync
 
 on:
-  push
+  schedule:
+    - cron: '*/15 * * * *' # Run every 15 minutes
 
 jobs:
   repo-sync:
