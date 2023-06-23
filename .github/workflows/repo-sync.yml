@@ -40,7 +40,7 @@ jobs:
             const {owner, repo} = context.repo;
             const head = '${{ secrets.INTERMEDIATE_BRANCH }}';
             const base = 'current'
-
+          
             async function closePullRequest(prNumber) {
               console.log('closing PR', prNumber)
               await github.rest.pulls.update({
@@ -59,6 +59,7 @@ jobs:
               head,
               base,
             });
+            console.log(existingPRs)
           
             for (const pr of existingPRs) {
               if (pr.head.ref === head) {
@@ -66,28 +67,25 @@ jobs:
               }
             }
           
-            const comparison = await github.rest.repos.compareCommits({
-              owner,
-              repo,
-              base,
-              head
-            });
+            try {
+              console.log('Creating new PR')
+              const { data: newPR } = await github.rest.pulls.create({
+                owner,
+                repo,
+                head,
+                base,
+                title: 'Syncing repo new',
+                body: 'Syncing repo',
+              });
           
-            if (comparison.data.status === 'identical') {
-              console.log('No new commits, skipping PR creation');
-              return;
+              console.log('Created new PR', newPR)
+            } catch (error) {
+              if (error.status === 422) {
+                console.log('No new commits, skipping PR creation');
+              } else {
+                console.error(error);
+              }
             }
-          
-            console.log('Creating new PR')
-            const { data: newPR } = await github.rest.pulls.create({
-              owner,
-              repo,
-              head,
-              base,
-              title: 'Syncing repo new',
-              body: 'Syncing repo',
-            });
-          
-            console.log('Created new PR', newPR)
+
           
  
