@@ -3,7 +3,7 @@ title: "Set operators"
 ---
 
 ### Unions
-Providing multiple space-delineated arguments to the `--select`, `--exclude`, or `--selector` flags selects
+Providing multiple space-delineated arguments to the `--select` or `--exclude` flags selects
 the union of them all. If a resource is included in at least one selector, it will be
 included in the final set.
 
@@ -16,8 +16,7 @@ Run snowplow_sessions, all ancestors of snowplow_sessions, fct_orders, and all a
 
 ### Intersections
 
-If multiple arguments to `--select`, `--exclude`, and `--selector` can be comma-separated (with no whitespace in between),
-dbt will select only resources which satisfy _all_ arguments.
+If you separate multiple arguments for `--select` and `--exclude` with commas and no whitespace in between, dbt will select only resources that satisfy _all_ arguments.
 
 Run all the common ancestors of snowplow_sessions and fct_orders:
 
