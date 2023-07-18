@@ -11,6 +11,9 @@ import CTA from '../../components/cta';
  * Import EditThisPage and CTA components
  * add featured_cta & editUrl props and elements
 */
+/*
+Test
+*/
 const LINK_CLASS_NAME = 'table-of-contents__link toc-highlight';
 const LINK_ACTIVE_CLASS_NAME = 'table-of-contents__link--active';
 export default function TOC({className, featured_cta, editUrl, ...props}) {
