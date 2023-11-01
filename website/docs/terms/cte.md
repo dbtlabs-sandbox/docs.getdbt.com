@@ -190,4 +190,3 @@ Want to know why dbt Labs loves CTEs? Check out the following pieces:
 - [Why we use so many CTEs](https://discourse.getdbt.com/t/why-the-fishtown-sql-style-guide-uses-so-many-ctes/1091)
 - [CTEs are Passthroughs](https://discourse.getdbt.com/t/ctes-are-passthroughs-some-research/155)
 
-test
