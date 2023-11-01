@@ -22,18 +22,21 @@ jobs:
           echo "$EVENT_CONTEXT"
 
       # Wait for deploy URL to be available from Vercel
-      - name: Get deployment URL
-        id: deployment
-        uses: dorshinar/get-deployment-url@master
-        timeout-minutes: 15
+      - name: Wait for Vercel Deployment
+        uses: patrickedqvist/wait-for-vercel-preview@v1.3.1
+        id: waitForDeployment
         with:
-          token: ${{ github.token }}
-          # Check for deploy URL every 20 seconds
-          retryInterval: '20000'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          max_timeout: 900
+          environment: production
+          check_interval: 20
+
+      # access deployment url
+      - run: echo ${{steps.waitForDeployment.outputs.url}}
 
       - name: Dump Deployment context
         env:
-          DEPLOY_CONTEXT: ${{ toJson(steps.deployment) }}
+          DEPLOY_CONTEXT: ${{ toJson(steps.waitForDeployment) }}
         run: |
           echo "$DEPLOY_CONTEXT"
 
