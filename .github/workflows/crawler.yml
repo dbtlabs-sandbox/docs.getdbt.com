@@ -31,6 +31,12 @@ jobs:
           # Check for deploy URL every 20 seconds
           retryInterval: '20000'
 
+      - name: Dump Deployment context
+        env:
+          DEPLOY_CONTEXT: ${{ toJson(steps.deployment) }}
+        run: |
+          echo "$DEPLOY_CONTEXT"
+
       # Once deploy URL is found, trigger Algolia crawl
       - name: Run Algolia Crawler
         uses: algolia/algoliasearch-crawler-github-actions@v1
