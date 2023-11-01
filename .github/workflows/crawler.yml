@@ -22,3 +22,4 @@ jobs:
           algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
           site-url: 'https://docs.getdbt.com'
           crawler-name: 'dbt'
+          override-config: true
