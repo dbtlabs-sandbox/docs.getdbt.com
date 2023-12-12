@@ -16,6 +16,18 @@ jobs:
     - name: Cache Docusaurus
       uses: docuactions/cache@v1
 
+    - name: Cache Build
+      uses: actions/cache@v3
+      id: cache-build
+      with:
+        path: |
+          ${{ github.workspace }}/website/.docusaurus
+          ${{ github.workspace }}/website/**/.cache
+        key: |
+          ${{ runner.os }}-docusaurus-${{ hashFiles('**/package-lock.json', '**/npm-shrinkwrap.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+        restore-keys: |
+          ${{ runner.os }}-docusaurus-${{ hashFiles('**/package-lock.json', '**/npm-shrinkwrap.json') }}
+
     - name: Install dependencies
       run: cd website && npm ci
 
